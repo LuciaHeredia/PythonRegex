@@ -17,9 +17,16 @@ def validateEmail(email: str) -> bool:
     return False
 
 
+def checkValidateEmail():
+    email = "example@example.com" # example
+    if validateEmail(email):
+        print(email," - Valid email address")
+    else:
+        print(email," - Invalid email address")
+
+
 def main():
-    email = "example@example.com"
-    print(validateEmail(email))
+    checkValidateEmail()
 
 
 if __name__ == '__main__':
