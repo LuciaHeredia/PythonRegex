@@ -58,8 +58,26 @@ def checkParsingCSVdata():
     print(parsingCSVdata(str_input))
 
 
+def extractingURLs(str_input: str) -> list[str]:
+    '''    
+    pattern: 
+        http -static text.
+        s? -optional char.
+        :// -static text.
+        (?:www\.)? -(www.) is optional.
+        [^\s]+ -any sequence of non-whitespace characters
+    '''
+    pattern = r"https?://(?:www\.)?[^\s]+"
+    return re.findall(pattern, str_input)
+
+
+def checkExtractingURLs():
+    str_input = "dfsfhttps://www.example.com sdfshttps://www.example.com" # example
+    print(extractingURLs(str_input))
+
+
 def main():
-    checkParsingCSVdata()
+    checkExtractingURLs()
 
 
 if __name__ == '__main__':
