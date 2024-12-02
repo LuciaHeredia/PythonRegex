@@ -1,13 +1,24 @@
-# Takes an email address as input and uses regular expressions 
-# to determine if it is a valid email address. 
-# Function should return True if email address is valid and False otherwise.
-def validateEmail(email):
-    
+import re
+
+def validateEmail(email: str) -> bool:
+    '''
+    pattern:
+        ^ matches start of string.
+        [a-zA-Z0-9._%+-]+ matches one or more: alphanumeric characters, dots, underscores, percent signs, plus signs, or hyphens.
+        @ matches @ symbol.
+        [a-zA-Z0-9.-]+ matches one or more: alphanumeric characters, dots, or hyphens.
+        \. matches dot before the top-level domain.
+        [a-zA-Z]{2,} matches the top-level domain (must be at least 2 characters long).
+        $ matches end of string.
+    '''
+    pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    if re.match(pattern, email):
+        return True
     return False
 
 
 def main():
-    email = "dd"
+    email = "example@example.com"
     print(validateEmail(email))
 
 
