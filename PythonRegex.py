@@ -25,8 +25,26 @@ def checkValidateEmail():
         print(email," - Invalid email address")
 
 
+def extractPhoneNumbers(str_input: str) -> list[str]:
+    '''
+     pattern: (matches Isrsel Mobile numbers: 05XXXXXXXX)
+     05 phone start.
+     [0-9] one digit.
+     \-? optional - symbol.
+     [0-9]{7} other 7 digits.
+    '''
+    pattern = r"05[0-9]\-?[0-9]{7}"
+    phone_numbers = re.findall(pattern, str_input)
+    return phone_numbers
+
+
+def checkExtractPhoneNumbers():
+    str_input = "sd780567 6777777fs8d34f054054-6375653ghf" # example
+    print(extractPhoneNumbers(str_input))
+
+
 def main():
-    checkValidateEmail()
+    checkExtractPhoneNumbers()
 
 
 if __name__ == '__main__':
