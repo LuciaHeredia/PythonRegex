@@ -40,7 +40,7 @@ def extractPhoneNumbers(str_input: str) -> list[str]:
 
 def checkExtractPhoneNumbers():
     str_input = "sd780567 6777777fs8d34f054054-6375653ghf" # example
-    print(extractPhoneNumbers(str_input))
+    print("Phones list:", extractPhoneNumbers(str_input))
 
 
 def parsingCSVdata(str_input: str) -> list[list[str]]:
@@ -64,6 +64,7 @@ def extractingURLs(str_input: str) -> list[str]:
         http -static text.
         s? -optional char.
         :// -static text.
+        ?: -group parts (www.) without creating a separate group that can be accessed using indexing.
         (?:www\.)? -(www.) is optional.
         [^\s]+ -any sequence of non-whitespace characters
     '''
@@ -73,7 +74,7 @@ def extractingURLs(str_input: str) -> list[str]:
 
 def checkExtractingURLs():
     str_input = "dfsfhttps://www.example.com sdfshttps://www.example.com" # example
-    print(extractingURLs(str_input))
+    print("URLs list:", extractingURLs(str_input))
 
 
 def findingDuplicateWords(str_input: str) -> list[str]:
@@ -94,7 +95,7 @@ def findingDuplicateWords(str_input: str) -> list[str]:
 
 def checkFindingDuplicateWords():
     str_input = "dan is dan, is dan 676 dan 676 exit" # example
-    print(findingDuplicateWords(str_input))
+    print("DuplicateWords list:", findingDuplicateWords(str_input))
 
 
 def extractingHashtags(str_input: str) -> list[str]:
@@ -111,19 +112,32 @@ def extractingHashtags(str_input: str) -> list[str]:
 
 def checkExtractingHashtags():
     str_input = "# ##ew5 hello #exit" # example
-    print(extractingHashtags(str_input))
+    print("Hashtags list:", extractingHashtags(str_input))
 
 
-'''
-Exercise 7: Extracting IP Addresses
-Write a Python function that takes a string as input and extracts all the IP addresses
-from it using regular expressions. The function should return a list of all the IP
-addresses found in the input string.
-'''
+def extractingIpAddresses(str_input: str) -> list[str]:
+    '''
+    pattern: 
+        (?:\d{1,3}\.){3} -3 groups of (XXX.)
+        \d{1,3} -1 group of (XXX.)
+    '''
+    pattern = r"(?:\d{1,3}\.){3}\d{1,3}"
+    return re.findall(pattern, str_input)
+
+
+def checkExtractingIpAddresses():
+    str_input = "23.45.333.444.6.56.7dfg dfg 5.10.65.44" # example
+    print("IpAddresses list:", extractingIpAddresses(str_input))
 
 
 def main():
-    checkExtractingHashtags()
+    #checkValidateEmail()
+    #checkExtractPhoneNumbers()
+    #checkParsingCSVdata()
+    #checkExtractingURLs()
+    #checkFindingDuplicateWords()
+    #checkExtractingHashtags()
+    checkExtractingIpAddresses()
 
 
 if __name__ == '__main__':
