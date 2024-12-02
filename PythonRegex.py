@@ -76,8 +76,29 @@ def checkExtractingURLs():
     print(extractingURLs(str_input))
 
 
+def findingDuplicateWords(str_input: str) -> list[str]:
+    '''
+    pattern: 
+        \b -Word boundary, ensures match is either at the start/end of a word.
+        (\w+) - Capturing group 1(a sequence of word characters).
+        \w -matches any word character(alphanumeric plus underscore)
+        + -quantifier indicates one or more occurrences.
+        \b -Word boundary, ensuring captured group is a complete word.
+        (?=.*\b\1\b) -Positive lookahead assertion. 
+                      Checks if captured group(\1) appears anywhere in string after current match, but does not include it in actual match.
+    '''
+    pattern = r"\b(\w+)\b(?=.*\b\1\b)"
+    duplicate_words = re.findall(pattern, str_input)
+    return list(set(duplicate_words))
+
+
+def checkFindingDuplicateWords():
+    str_input = "dan is dan, is dan 676 dan 676 exit" # example
+    print(findingDuplicateWords(str_input))
+
+
 def main():
-    checkExtractingURLs()
+    checkFindingDuplicateWords()
 
 
 if __name__ == '__main__':
