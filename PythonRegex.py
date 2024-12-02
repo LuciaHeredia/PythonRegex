@@ -28,10 +28,10 @@ def checkValidateEmail():
 def extractPhoneNumbers(str_input: str) -> list[str]:
     '''
      pattern: (matches Isrsel Mobile numbers: 05XXXXXXXX)
-     05 phone start.
-     [0-9] one digit.
-     \-? optional - symbol.
-     [0-9]{7} other 7 digits.
+        05 phone start.
+        [0-9] one digit.
+        \-? optional - symbol.
+        [0-9]{7} other 7 digits.
     '''
     pattern = r"05[0-9]\-?[0-9]{7}"
     phone_numbers = re.findall(pattern, str_input)
@@ -43,8 +43,23 @@ def checkExtractPhoneNumbers():
     print(extractPhoneNumbers(str_input))
 
 
+def parsingCSVdata(str_input: str) -> list[list[str]]:
+    rows = str_input.strip().split('\\n')
+    data = []
+    for row in rows:
+        pattern = r","
+        values = re.split(pattern, row)
+        data.append(values)
+    return data
+
+
+def checkParsingCSVdata():
+    str_input = "fsgdg,dfg\\nvbn ghf" # example
+    print(parsingCSVdata(str_input))
+
+
 def main():
-    checkExtractPhoneNumbers()
+    checkParsingCSVdata()
 
 
 if __name__ == '__main__':
