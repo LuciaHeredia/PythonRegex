@@ -26,7 +26,7 @@ def match_str_ax(str_input: str):
      pattern: 
         a -static char.
         b* -match none to more 'b's.
-        ? -? after * makes the match non-greedy, meaning it will match as few 'b's as possible.
+        ? -the ? after, makes the match non-greedy, meaning it will match as few 'b's as possible.
     '''
     pattern = r"ab*?"
 
@@ -36,6 +36,27 @@ def match_str_ax(str_input: str):
         b+ -match one to more 'b's.
     '''
     pattern = r"ab+?"
+
+    # 4. matche a string that has an 'a' followed by zero or one 'b's
+    '''
+     pattern: 
+        b? -match zero or one 'b's (at least).
+    '''
+    pattern = r"ab?"
+
+    # 5. matche a string that has an 'a' followed by three 'b's
+    '''
+     pattern: 
+        b{3} -bbb exactly.
+    '''
+    pattern = r"ab{3}?"
+
+    # 6. matche a string that has an 'a' followed by two or three 'b's
+    '''
+     pattern: 
+        b{2,3} -bb or bbb exactly.
+    '''
+    pattern = r"ab{2,3}?"
 
     if re.search(pattern, str_input):
         return True
