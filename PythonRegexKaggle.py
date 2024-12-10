@@ -24,12 +24,23 @@ def match_str_ax(str_input: str):
     # 2. match a string that has an 'a' followed by none or more 'b's
     '''
      pattern: 
-        
+        a -static char.
+        b* -match none to more 'b's.
+        ? -? after * makes the match non-greedy, meaning it will match as few 'b's as possible.
     '''
     pattern = r"ab*?"
+
+    # 3. matche a string that has an 'a' followed by one or more b's
+    '''
+     pattern: 
+        b+ -match one to more 'b's.
+    '''
+    pattern = r"ab+?"
+
     if re.search(pattern, str_input):
         return True
     return False
+
 
 def check_match_str_ax():
     str_input = "abb" # example
