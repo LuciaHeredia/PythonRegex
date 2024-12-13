@@ -13,7 +13,22 @@
 [PythonRegexKaggle.py](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py)
 ([Kaggle Source](https://www.kaggle.com/code/albeffe/regex-exercises-solutions/notebook))
 1. Is string alphanumeric
-2. Match string containing: 'a' followed by none or more 'b's
-3. ??
-4. ??
-5. ??
+2. Match string: has an 'a' followed by none or more 'b's
+3. Match string: has an 'a' followed by one or more b's
+4. Match string: has an 'a' followed by zero or one 'b's
+5. Match string: has an 'a' followed by three 'b's
+6. Match string: has an 'a' followed by two or three 'b's
+7. Find sequences of lowercase letters joined with a underscore.
+8. ??
+9. ??
+10. ??
+11. ??
+12. ??
+13. ??
+14. ??
+15. ??
+16. ??
+17. ??
+18. ??
+19. ??
+20. ??

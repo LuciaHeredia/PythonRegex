@@ -62,7 +62,6 @@ def match_str_ax(str_input: str):
         return True
     return False
 
-
 def check_match_str_ax():
     str_input = "abb" # example
     if match_str_ax(str_input):
@@ -71,12 +70,25 @@ def check_match_str_ax():
         print("No match.")
 
 
+def lowercase_with_underscore(str_input: str):
+    # 7. find sequences of lowercase letters joined(connected) with a underscore.
+    '''
+     pattern: 
+        [a-z]+ -lowercase characters, one or more.
+        _ -the char '_'
+    '''
+    pattern = r"[a-z]+_[a-z]+"
+    return re.findall(pattern, str_input)
 
+def check_lowercase_with_underscore():
+    str_input = "FD Fd_ss32 d_h45 dsf" # example
+    print(lowercase_with_underscore(str_input))
 
 
 def main():
     #check_is_str_alphanumeric()
-    check_match_str_ax()
+    #check_match_str_ax()
+    check_lowercase_with_underscore()
 
 if __name__ == '__main__':
     main()
