@@ -70,7 +70,7 @@ def check_match_str_ax():
         print("No match.")
 
 
-def lowercase_with_underscore(str_input: str):
+def find_sequences_Xcase(str_input: str):
     # 7. find sequences of lowercase letters joined(connected) with a underscore.
     '''
      pattern: 
@@ -78,17 +78,25 @@ def lowercase_with_underscore(str_input: str):
         _ -the char '_'
     '''
     pattern = r"[a-z]+_[a-z]+"
+
+    # 8. find sequences of one upper case letter followed by lower case letters.
+    '''
+     pattern: 
+        [A-Z] -one upper case letter.
+        [a-z]+ -lowercase characters, one or more.
+    '''
+    pattern = r"[A-Z][a-z]+"
     return re.findall(pattern, str_input)
 
-def check_lowercase_with_underscore():
-    str_input = "FD Fd_ss32 d_h45 dsf" # example
-    print(lowercase_with_underscore(str_input))
+def check_find_sequences_Xcase():
+    str_input = "FD Fd_ss32 d_Fh45 dsf" # example
+    print("The sequences found:", find_sequences_Xcase(str_input))
 
 
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
-    check_lowercase_with_underscore()
+    check_find_sequences_Xcase()
 
 if __name__ == '__main__':
     main()
