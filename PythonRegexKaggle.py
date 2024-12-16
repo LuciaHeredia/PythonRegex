@@ -30,40 +30,49 @@ def match_str_ax(str_input: str):
     '''
     pattern = r"ab*?"
 
-    # 3. matche a string that has an 'a' followed by one or more b's
+    # 3. match a string that has an 'a' followed by one or more b's
     '''
      pattern: 
         b+ -match one to more 'b's.
     '''
     pattern = r"ab+?"
 
-    # 4. matche a string that has an 'a' followed by zero or one 'b's
+    # 4. match a string that has an 'a' followed by zero or one 'b's
     '''
      pattern: 
         b? -match zero or one 'b's (at least).
     '''
     pattern = r"ab?"
 
-    # 5. matche a string that has an 'a' followed by three 'b's
+    # 5. match a string that has an 'a' followed by three 'b's
     '''
      pattern: 
         b{3} -bbb exactly.
     '''
     pattern = r"ab{3}?"
 
-    # 6. matche a string that has an 'a' followed by two or three 'b's
+    # 6. match a string that has an 'a' followed by two or three 'b's
     '''
      pattern: 
         b{2,3} -bb or bbb exactly.
     '''
     pattern = r"ab{2,3}?"
 
+    # 9. match a string that has an 'a' followed by anything, ending in 'b'
+    '''
+     pattern: 
+        a -the char 'a'
+        .* -match any single char except newline, 0 or more repetitions.
+        b$ -ends in 'b'
+    '''
+    pattern = r"a.*b$"
+
     if re.search(pattern, str_input):
         return True
     return False
 
 def check_match_str_ax():
-    str_input = "abb" # example
+    str_input = "aab" # example
     if match_str_ax(str_input):
         print("Found a match.")
     else:
@@ -95,8 +104,8 @@ def check_find_sequences_Xcase():
 
 def main():
     #check_is_str_alphanumeric()
-    #check_match_str_ax()
-    check_find_sequences_Xcase()
+    check_match_str_ax()
+    #check_find_sequences_Xcase()
 
 if __name__ == '__main__':
     main()
