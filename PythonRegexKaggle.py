@@ -102,10 +102,32 @@ def check_find_sequences_Xcase():
     print("The sequences found:", find_sequences_Xcase(str_input))
 
 
+def word_at_beginning(str_input: str):
+    # 10. Match a word at the beginning of a string.
+    '''
+     pattern: 
+        ^ -match start of string
+        [a-zA-Z] -alphabetic chars
+        + -one or more alphabetic chars
+    '''
+    pattern = r"^[a-zA-Z]+"
+    if re.match(pattern, str_input):
+        return True
+    return False
+
+def check_word_at_beginning():
+    str_input = "d 332world" # example
+    if word_at_beginning(str_input):
+        print("Match found.")
+    else:
+        print("No match found.")
+
+
 def main():
     #check_is_str_alphanumeric()
-    check_match_str_ax()
+    #check_match_str_ax()
     #check_find_sequences_Xcase()
+    check_word_at_beginning()
 
 if __name__ == '__main__':
     main()

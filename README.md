@@ -21,7 +21,7 @@
 7. Find sequences of: lowercase letters joined with a underscore.
 8. Find sequences of: one upper case letter followed by lower case letters.
 9. Match string: has an 'a' followed by anything, ending in 'b'
-10. ??
+10. Match a word at the beginning of a string.
 11. ??
 12. ??
 13. ??
