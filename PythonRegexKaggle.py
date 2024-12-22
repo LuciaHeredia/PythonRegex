@@ -123,11 +123,33 @@ def check_word_at_beginning():
         print("No match found.")
 
 
+def word_at_end(str_input: str):
+    # 11. Match a word at the end of string, with optional punctuation.
+    '''
+     pattern: 
+        [a-zA-Z]+ -one or more alphabetic char.
+        [^\w\s]* - matches any non-word, non-space character, zero or more times.
+        $ -matches the end of the string(of preceding regex).
+    '''
+    pattern = r"[a-zA-Z]+[^\w\s]*$"
+    if re.search(pattern, str_input):
+        return True
+    return False
+
+def check_word_at_end(): 
+    str_input = "hi you!" # example
+    if word_at_end(str_input):
+        print("Match found.")
+    else:
+        print("No match found.")
+
+
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
     #check_find_sequences_Xcase()
-    check_word_at_beginning()
+    #check_word_at_beginning()
+    check_word_at_end()
 
 if __name__ == '__main__':
     main()

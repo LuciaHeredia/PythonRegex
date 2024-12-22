@@ -22,7 +22,7 @@
 8. Find sequences of: [one upper case letter followed by lower case letters](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L91)
 9. Match string: [has an 'a' followed by anything, ending in 'b'](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L61)
 10. [Match a word at the beginning of a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L105)
-11. ??
+11. [Match a word at the end of string, with optional punctuation]()
 12. ??
 13. ??
 14. ??
