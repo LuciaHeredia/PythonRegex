@@ -144,12 +144,33 @@ def check_word_at_end():
         print("No match found.")
 
 
+def containing_char(str_input: str):
+    # 12. Match a word containing 'z'
+    '''
+     pattern: 
+        [zZ] -match z or Z.
+        + -one or more.
+    '''
+    pattern = r"[zZ]+"
+    if re.search(pattern, str_input):
+        return True
+    return False
+
+def check_containing_char():
+    str_input = "the Zero" # example
+    if containing_char(str_input):
+        print("Match found.")
+    else:
+        print("No match found.")
+
+
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
     #check_find_sequences_Xcase()
     #check_word_at_beginning()
-    check_word_at_end()
+    #check_word_at_end()
+    check_containing_char()
 
 if __name__ == '__main__':
     main()

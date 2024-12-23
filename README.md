@@ -21,9 +21,9 @@
 7. Find sequences of: [lowercase letters joined with a underscore](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L82)
 8. Find sequences of: [one upper case letter followed by lower case letters](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L91)
 9. Match string: [has an 'a' followed by anything, ending in 'b'](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L61)
-10. [Match a word at the beginning of a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L105)
-11. [Match a word at the end of string, with optional punctuation](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L126)
-12. ??
+10. Match a word at: [the beginning of a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L105)
+11. Match a word at: [the end of string, with optional punctuation](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L126)
+12. Match a word containing: ['z'](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L147)
 13. ??
 14. ??
 15. ??
@@ -32,3 +32,13 @@
 18. ??
 19. ??
 20. ??
+21. ??
+22. ??
+23. ??
+24. ??
+25. ??
+26. ??
+27. ??
+28. ??
+29. ??
+30. ??
