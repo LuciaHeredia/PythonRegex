@@ -24,7 +24,7 @@
 10. Match a word at: [the beginning of a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L105)
 11. Match a word at: [the end of string, with optional punctuation](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L126)
 12. Match a word containing: ['z'](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L147)
-13. Match a word containing: ['z', not at start or end of the word.](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L156)
+13. Match a word containing: ['z', not at start or end of the word](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L157)
 14. ??
 15. ??
 16. ??
