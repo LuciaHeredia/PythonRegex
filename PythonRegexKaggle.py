@@ -145,19 +145,29 @@ def check_word_at_end():
 
 
 def containing_char(str_input: str):
-    # 12. Match a word containing 'z'
+    # 12. Match a word containing 'z'.
     '''
      pattern: 
-        [zZ] -match z or Z.
-        + -one or more.
+        \b -word boundry.
+        \w* - zero or more word chars.
+        z -char 'z'.
     '''
-    pattern = r"[zZ]+"
+    pattern = r"\b\w*z\w*\b"
+
+    # 13. Match a word containing 'z', not at the start or end of the word.
+    '''
+     pattern: 
+        \B - match where chars are present, but NOT at start/end of a word.
+        z -char 'z'.
+    '''
+    pattern = r"\Bz\B"
+
     if re.search(pattern, str_input):
         return True
     return False
 
 def check_containing_char():
-    str_input = "the Zero" # example
+    str_input = "the hero zd khjd" # example
     if containing_char(str_input):
         print("Match found.")
     else:
