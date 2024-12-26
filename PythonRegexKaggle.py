@@ -174,13 +174,36 @@ def check_containing_char():
         print("No match found.")
 
 
+def match_string(str_input: str):
+    # 14. Match a string that has only: upper/lowercase letters, numbers, underscores.
+    '''
+     pattern: 
+        ^ -match start of string.
+        [a-zA-Z0-9_]* - zero or more: upper/lowercase letters, numbers, underscores.
+        $ -match end of string.
+    '''
+    pattern = r"^[a-zA-Z0-9_]*$"
+
+    if re.search(pattern, str_input):
+        return True
+    return False
+
+def check_match_string():
+    str_input = "the_hero_is_him" # example
+    if match_string(str_input):
+        print("Match found.")
+    else:
+        print("No match found.")
+
+
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
     #check_find_sequences_Xcase()
     #check_word_at_beginning()
     #check_word_at_end()
-    check_containing_char()
+    #check_containing_char()
+    check_match_string()
 
 if __name__ == '__main__':
     main()
