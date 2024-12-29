@@ -183,13 +183,22 @@ def match_string(str_input: str):
         $ -match end of string.
     '''
     pattern = r"^[a-zA-Z0-9_]*$"
+    results = re.search(pattern, str_input)
 
-    if re.search(pattern, str_input):
+    # 15. Match a string where it starts with a specific number.(ex.:1)
+    '''
+     pattern: 
+        ^1 -match start of string with char'1'.
+    '''
+    pattern = r"^1"
+    results = re.match(pattern, str_input)
+
+    if results:
         return True
     return False
 
 def check_match_string():
-    str_input = "the_hero_is_him" # example
+    str_input = "1_the_hero_is_him" # example
     if match_string(str_input):
         print("Match found.")
     else:
