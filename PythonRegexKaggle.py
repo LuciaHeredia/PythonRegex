@@ -205,6 +205,21 @@ def check_match_string():
         print("No match found.")
 
 
+def remove_leading_zeros(ip: str):
+    # 16. Remove leading zeros from IP address.
+    '''
+     pattern: 
+        \.[0]* -char "."with zero or more 0's after
+    '''
+    pattern = r"\.[0]*"
+    # with sub, replace pattern with "."
+    return re.sub(pattern, '.', ip) 
+
+def check_remove_leading_zeros():
+    ip = "13.0342.032.2" # example
+    print(remove_leading_zeros(ip))
+
+
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
@@ -212,7 +227,8 @@ def main():
     #check_word_at_beginning()
     #check_word_at_end()
     #check_containing_char()
-    check_match_string()
+    #check_match_string()
+    check_remove_leading_zeros()
 
 if __name__ == '__main__':
     main()
