@@ -28,7 +28,7 @@
 14. Match string: [has only: upper/lowercase letters, numbers, underscores](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L177)
 15. Match string: [where it starts with a specific number](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L187)
 16. [Remove leading zeros from IP address](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L208)
-17. [NEW TASK](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L222)
+17. [Check for a number at the end of a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L223)
 18. ??
 19. ??
 20. ??
