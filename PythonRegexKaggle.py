@@ -220,6 +220,24 @@ def check_remove_leading_zeros():
     print(remove_leading_zeros(ip))
 
 
+def is_num_at_end(str_input: str):
+    # 17. Check for a number at the end of a string.
+    '''
+     pattern: 
+        \d+ -one or more nu,eric char
+        $ -at end of string
+    '''
+    pattern = r"\d+$"
+    return re.search(pattern, str_input) 
+
+def check_is_num_at_end():
+    str_input = "year 2022" # example
+    if is_num_at_end(str_input):
+        print("Match found.")
+    else:
+        print("No match found.")
+
+
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
@@ -228,7 +246,8 @@ def main():
     #check_word_at_end()
     #check_containing_char()
     #check_match_string()
-    check_remove_leading_zeros()
+    #check_remove_leading_zeros()
+    check_is_num_at_end()
 
 if __name__ == '__main__':
     main()
