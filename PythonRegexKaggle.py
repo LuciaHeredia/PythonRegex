@@ -224,7 +224,7 @@ def is_num_at_end(str_input: str):
     # 17. Check for a number at the end of a string.
     '''
      pattern: 
-        \d+ -one or more nu,eric char
+        \d+ -one or more numeric char
         $ -at end of string
     '''
     pattern = r"\d+$"
@@ -238,6 +238,25 @@ def check_is_num_at_end():
         print("No match found.")
 
 
+def search_str(str_input: str):
+    # 18. Search in a string: numbers(0-9) of length between 1-3.
+    '''
+     pattern: 
+        \b -boundry number, match as whole
+        \d{1,3} - 1-3 numeric chars
+    '''
+    pattern = r"\b\d{1,3}\b"
+    return re.findall(pattern, str_input)
+
+def check_search_str():
+    str_input = "222 2 1111" # example
+    result = search_str(str_input)
+    if result:
+        print(result)
+    else:
+        print("No match found.")
+
+
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
@@ -247,7 +266,8 @@ def main():
     #check_containing_char()
     #check_match_string()
     #check_remove_leading_zeros()
-    check_is_num_at_end()
+    #check_is_num_at_end()
+    check_search_str()
 
 if __name__ == '__main__':
     main()
