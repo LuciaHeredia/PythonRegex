@@ -257,6 +257,21 @@ def check_search_str():
         print("No match found.")
 
 
+def search_strings(str: str, to_search: list):
+    # 19. Search literal strings in a string.
+    for pattern in to_search:
+        print("Searching for:", pattern)
+        if re.search(pattern, str):
+            print("-> Match found!")
+        else:
+            print("-> No match found.")
+
+def check_search_strings():
+    str = "The quick brown fox jumps over the lazy dog" # example
+    to_search = ['fox', 'dog', 'horse'] # example
+    search_strings(str, to_search)
+
+
 def main():
     #check_is_str_alphanumeric()
     #check_match_str_ax()
@@ -267,7 +282,8 @@ def main():
     #check_match_string()
     #check_remove_leading_zeros()
     #check_is_num_at_end()
-    check_search_str()
+    #check_search_str()
+    check_search_strings()
 
 if __name__ == '__main__':
     main()

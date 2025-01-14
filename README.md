@@ -30,7 +30,7 @@
 16. [Remove leading zeros from IP address](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L208)
 17. [Check for a number at the end of a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L223)
 18. Search in a string: [numbers(0-9) of length between 1-3](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L241)
-19. ??
+19. [Search literal strings in a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L260)
 20. ??
 21. ??
 22. ??
