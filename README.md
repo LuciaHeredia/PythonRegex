@@ -1,7 +1,7 @@
 **Regular expressions (Regex)** are an extremely versatile tool for matching, searching, and manipulating text in Python.
 (using **module re**)
 
-[PythonRegex.py](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegex.py)
+[PythonRegex.py](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegex.py) :
 1. [Validating Email Addresses](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegex.py#L3)
 2. [Extracting Phone Numbers](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegex.py#L28)
 3. [Parsing CSV Data](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegex.py#L46)
@@ -10,7 +10,7 @@
 6. [Extracting Hashtags](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegex.py#L101)
 7. [Extracting IP Addresses](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegex.py#L118)
 
-[PythonRegexKaggle.py](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py)
+[PythonRegexKaggle.py](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py) : 
 ([Kaggle Source](https://www.kaggle.com/code/albeffe/regex-exercises-solutions/notebook))
 1. [Is string alphanumeric](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L4)
 2. Match string: [has an 'a' followed by none or more 'b's](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L24)
@@ -30,8 +30,8 @@
 16. [Remove leading zeros from IP address](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L208)
 17. [Check for a number at the end of a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L223)
 18. Search in a string: [numbers(0-9) of length between 1-3](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L241)
-19. [Search literal strings in a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L260)
-20. ??
+19. Search: [literal strings in a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L260)
+20. Search: [literal strings in a string & its location](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L260)
 21. ??
 22. ??
 23. ??
