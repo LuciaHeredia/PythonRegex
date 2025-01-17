@@ -258,11 +258,13 @@ def check_search_str():
 
 
 def search_strings(str: str, to_search: list):
-    # 19. Search literal strings in a string.
+    # 19. Search literal strings in a string,
+    # 20. & find the location where the pattern occurs.
     for pattern in to_search:
         print("Searching for:", pattern)
-        if re.search(pattern, str):
-            print("-> Match found!")
+        result = re.search(pattern, str)
+        if result is not None:
+            print("-> Match found at: %d - %d" %(result.start(), result.end()))
         else:
             print("-> No match found.")
 
