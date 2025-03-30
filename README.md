@@ -32,13 +32,3 @@
 18. Search in a string: [numbers(0-9) of length between 1-3](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L241)
 19. Search: [literal strings in a string](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L260)
 20. Search: [literal strings in a string & its location](https://github.com/LuciaHeredia/PythonRegex/blob/master/PythonRegexKaggle.py#L260)
-21. ??
-22. ??
-23. ??
-24. ??
-25. ??
-26. ??
-27. ??
-28. ??
-29. ??
-30. ??
